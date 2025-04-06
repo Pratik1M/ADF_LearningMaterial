@@ -1,0 +1,27 @@
+{
+	"name": "ds_cleansed_Customers",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azdldestination",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Cleansed"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('Customers/',formatDateTime(utcNow(),'yyyy-MMM-dd'))",
+					"type": "Expression"
+				},
+				"fileSystem": "cleansed"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

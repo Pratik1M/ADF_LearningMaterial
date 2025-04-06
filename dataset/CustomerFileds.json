@@ -1,0 +1,23 @@
+{
+	"name": "CustomerFileds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azbssource",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Customer_raw"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "customers.json",
+				"container": "source"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

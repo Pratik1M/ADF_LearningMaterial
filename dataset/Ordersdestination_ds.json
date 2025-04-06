@@ -1,0 +1,27 @@
+{
+	"name": "Ordersdestination_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azdldestination",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Customer_destination"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@formatDateTime(utcNow(),'yyyy-MMM-dd')",
+					"type": "Expression"
+				},
+				"fileSystem": "raw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

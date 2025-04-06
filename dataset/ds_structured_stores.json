@@ -1,0 +1,24 @@
+{
+	"name": "ds_structured_stores",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azdldestination",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "structured"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Stores",
+				"fileSystem": "structure"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

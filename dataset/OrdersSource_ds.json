@@ -1,0 +1,24 @@
+{
+	"name": "OrdersSource_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azbssource",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Customer_raw"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "orders.parquet",
+				"container": "source"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
