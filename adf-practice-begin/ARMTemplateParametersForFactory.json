@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-practice-begin"
+		},
+		"Azbssource_connectionString": {
+			"value": ""
+		},
+		"Azdldestination_accountKey": {
+			"value": ""
+		},
+		"ls_sql_db_password": {
+			"value": ""
+		},
+		"Azdldestination_properties_typeProperties_url": {
+			"value": "https://stdestinationcontainer.dfs.core.windows.net/"
+		},
+		"ls_sql_db_properties_typeProperties_server": {
+			"value": "sqlserverpractice-orders.database.windows.net"
+		},
+		"ls_sql_db_properties_typeProperties_database": {
+			"value": "sqldb-orders"
+		},
+		"ls_sql_db_properties_typeProperties_userName": {
+			"value": "sqlserveradmin"
+		}
+	}
+}
